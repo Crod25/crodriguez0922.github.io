@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Demo Exercises</title>
+    </head>
+<body>
+
+</script>
+
+    <h2>Temp Converter</h2>
+    <h4>Problem Statement</h4>
+    <p>Write a program that converts Fahrenheit temperatures to Celsius.</p>
+    <h4>Plans and pseudocode</h4>
+    <p>Ask user for Fahrenheit temp<br>
+    Celsius temp = (Fahrenheit temp - 32) * .5556;</p>
+    <h4>Solution</h4>
+    <code>var fahrTemp = parseInt(document.getElementById('fTemp').value); </code><br>   
+    <code>var celTemp = (fahrTemp - 32) * .5556;</code><br>
+    <code>document.getElementById("cTemp").innerHTML = "Celsius = " + celTemp;</code><br>
+    <h4>Demonstration</h4>
+    Fahrenheit Temperature: <input type="text" id="fTemp" value="55"><br>
+    <button onclick="tempConver()">Convert Temp</button>
+    <p id="cTemp"></p>
+    <script> 
+        function tempConver() {
+            var fahrTemp = parseInt(document.getElementById('fTemp').value);    
+            var celTemp = (fahrTemp - 32) * .5556;
+            document.getElementById("cTemp").innerHTML = "Celsius = " + celTemp;
+        }
+    </script>
+
+
+    <h2>Calculate Total Meal Price with Variable Tax and Tip</h2>
+    <h4>Problem Statement</h4>
+    <p>Write a program that asks the user for a meal price, tax rate, and tip percentage and then calculates the total bill.</p>
+    <h4>Plans and pseudocode</h4>
+    <p>Ask user for the meal price, tax rate and tip rate<br>
+    totalCost = mealPrice + (mealPrice * (taxRate / 100.0)) + (mealPrice * (tipRate / 100.0))</p>
+    <h4>Solution</h4>
+    <code>var mealPrice = parseInt(document.getElementById('mealPriceInput2').value);</code><br>
+    <code>var taxRate = parseInt(document.getElementById('taxRateInput').value);</code><br>
+    <code>var tipRate = parseInt(document.getElementById('tipRateInput').value);</code><br>
+    <code>var totalCost = mealPrice + (mealPrice * (taxRate / 100.0)) + (mealPrice * (tipRate / 100.0));</code><br>
+    <code>document.getElementById("cost2").innerHTML = "Total Cost = " + totalCost;</code><br>
+    <h4>Demonstration</h4>
+    Meal Price: <input type="text" id="mealPriceInput2" value="60"><br>
+    Tax Rate: <input type="text" id="taxRateInput" value="6"><br>
+    Tip Rate: <input type="text" id="tipRateInput" value="15"><br>
+    <button onclick="mealPriceCalc2()">Calculate Meal Price</button>
+    <p id="cost2"></p>
+    <script> 
+        function mealPriceCalc2() {
+            var mealPrice = parseInt(document.getElementById('mealPriceInput2').value);
+            var taxRate = parseInt(document.getElementById('taxRateInput').value);
+            var tipRate = parseInt(document.getElementById('tipRateInput').value);
+            var totalCost = mealPrice + (mealPrice * (taxRate / 100.0)) + (mealPrice * (tipRate / 100.0));
+            document.getElementById("cost2").innerHTML = "Total Cost = " + totalCost;
+        }
+    </script>
+
+    <h2>Calculate Total Meal Price with Fixed Tax and Tip</h2>
+    <h4>Problem Statement</h4>
+    <p>Write a program that asks the user for a meal price and then calculates the total bill including fixed rates for tax and tip. </p>
+    <h4>Plans and pseudocode</h4>
+    <p>Ask user for meal price <br>
+    totalCost = mealPrice + (mealPrice * .06) + (mealPrice * .15)</p>
+    <h4>Solution</h4>
+    <code>var mealPrice =  parseInt(document.getElementById('mealPriceInput1').value); </code><br>
+    <code>var totalCost = mealPrice + (mealPrice * .06) + (mealPrice * .15); </code><br>
+    <code>document.getElementById("cost1").innerHTML = "Total Cost = " + totalCost;</coe><br>
+    <h4>Demonstration</h4>
+    Meal Price: <input type="text" id="mealPriceInput1" value="45"><br>
+    <button onclick="mealPriceCalc1()">Calculate Meal Price</button>
+    <p id="cost1"></p>
+    <script> 
+        function mealPriceCalc1() {
+            var mealPrice =  parseInt(document.getElementById('mealPriceInput1').value);
+            var totalCost = mealPrice + (mealPrice * .06) + (mealPrice * .15);
+            document.getElementById("cost1").innerHTML = "Total Cost = " + totalCost;
+        }
+    </script>
+
+</body>
+</html>
